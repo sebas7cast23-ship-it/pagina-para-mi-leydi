@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fff5f8, #ffdce8);
+    color: #4a2630;
+    overflow-x: hidden;
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.inicio {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+
+.flor {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.inicio h1 {
+    font-size: 3.2rem;
+    color: #c73568;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    max-width: 650px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #e85d8a, #c73568);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(199, 53, 104, 0.25);
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* =========================
+   MENSAJE
+========================= */
+
+.mensaje {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 25px;
+}
+
+.tarjeta {
+    max-width: 750px;
+    padding: 55px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 30px;
+
+    box-shadow: 0 20px 50px rgba(150, 50, 90, 0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+.pequeno {
+    color: #c73568;
+    font-size: 0.9rem;
+}
+
+.tarjeta h2 {
+    font-size: 2.5rem;
+    margin: 15px 0 30px;
+}
+
+.tarjeta p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria {
+    min-height: 100vh;
+    padding: 100px 30px;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 2.6rem;
+    color: #c73568;
+}
+
+.subtitulo {
+    margin: 15px auto 50px;
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.foto {
+    padding: 10px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: 0.4s;
+}
+
+.foto:hover {
+    transform: translateY(-12px) rotate(2deg);
+}
+
+.foto img {
+    width: 250px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* =========================
+   CANCIÓN
+========================= */
+
+.cancion {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 25px;
+    text-align: center;
+}
+
+.musica {
+    padding: 50px;
+    width: 400px;
+    max-width: 100%;
+
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+
+    box-shadow: 0 20px 50px rgba(150, 50, 90, 0.15);
+}
+
+.disco {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: girar 5s linear infinite;
+}
+
+.musica h2 {
+    margin-bottom: 15px;
+}
+
+.musica p {
+    margin-bottom: 25px;
+    color: #c73568;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    min-height: 80vh;
+    padding: 100px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.final h2 {
+    font-size: 2.7rem;
+    color: #c73568;
+    margin-bottom: 25px;
+}
+
+.final p {
+    max-width: 650px;
+    line-height: 1.8;
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+}
+
+.final span {
+    font-style: italic;
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   CORAZONES
+========================= */
+
+.corazon {
+    position: fixed;
+    top: -30px;
+    font-size: 20px;
+    animation: caer linear forwards;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes caer {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .inicio h1 {
+        font-size: 2.2rem;
+    }
+
+    .inicio p {
+        font-size: 1rem;
+    }
+
+    .tarjeta {
+        padding: 30px 22px;
+    }
+
+    .tarjeta h2 {
+        font-size: 2rem;
+    }
+
+    .foto img {
+        width: 80vw;
+        height: 420px;
+    }
+
+    .final h2 {
+        font-size: 2.1rem;
+    }
+}
